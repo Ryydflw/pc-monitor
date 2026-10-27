@@ -14,8 +14,8 @@
 
 | Система | Файл |
 |---|---|
-| Windows 10 / 11 (64-бит) | `PcMonitor-1.2.1.exe` |
-| Windows 7 / 8 / 8.1 (64-бит) | `PcMonitor-1.2.1-win7.exe` |
+| Windows 10 / 11 (64-бит) | `PcMonitor-1.2.5.exe` |
+| Windows 7 / 8 / 8.1 (64-бит) | `PcMonitor-1.2.5-win7.exe` |
 
 При первом запуске Windows может показать «Windows защитила ваш компьютер» — так бывает со всеми новыми программами без платной цифровой подписи. Нажмите **Подробнее → Выполнить в любом случае**.
 
@@ -31,6 +31,12 @@
 - **Панель «Статистика»** у левого края и **оверлей** поверх игры (**Ctrl+Shift+O**).
 - **Защита от перегрева:** при 80 °C и выше игра сворачивается (или закрывается — по выбору).
 - **Обновления:** при запуске программа сама проверяет GitHub и предлагает «Обновиться / Не сейчас»; новая версия скачивается и ставится сама. В версии для Windows 7 файл скачивается через браузер.
+- **Вентиляторы, диски и сеть:** обороты вентиляторов, температура SSD, скорость чтения/записи дисков, скорость загрузки и отдачи.
+- **О системе** как в CPU-Z: модель процессора, ядра, кэши, инструкции, материнская плата, BIOS, модули памяти, видеокарта и драйвер.
+- **Запись в CSV:** все показатели в таблицу, чтобы сравнить «до и после разгона».
+- **Трей и мини-режим:** значок у часов с температурой или FPS, маленькое окно с четырьмя цифрами поверх всех окон.
+- **Экономия энергии** для ноутбуков: от батареи программа обновляется реже; свёрнутая в трей почти не тратит процессор.
+- **Тёмная и светлая темы**, выбор цвета акцента.
 - **Автозапуск** с Windows, **языки** русский и английский.
 
 ### Конфиденциальность
@@ -64,8 +70,8 @@ Real-time PC monitoring for Windows: CPU, GPU, RAM, power, ping and game FPS cha
 
 | System | File |
 |---|---|
-| Windows 10 / 11 (64-bit) | `PcMonitor-1.2.1.exe` |
-| Windows 7 / 8 / 8.1 (64-bit) | `PcMonitor-1.2.1-win7.exe` |
+| Windows 10 / 11 (64-bit) | `PcMonitor-1.2.5.exe` |
+| Windows 7 / 8 / 8.1 (64-bit) | `PcMonitor-1.2.5-win7.exe` |
 
 On first run Windows may show "Windows protected your PC" — this happens to every new program without a paid code-signing certificate. Click **More info → Run anyway**.
 
@@ -81,6 +87,12 @@ On first run Windows may show "Windows protected your PC" — this happens to ev
 - **Statistics panel** on the left edge and an in-game **overlay** (**Ctrl+Shift+O**).
 - **Overheat protection:** at 80 °C or more the game is minimized (or closed — your choice).
 - **Updates:** at startup the program checks GitHub and offers "Update / Not now"; the new version downloads and installs itself. In the Windows 7 edition the file is downloaded via the browser.
+- **Fans, disks and network:** fan speeds, SSD temperature, disk read/write speed, download and upload speed.
+- **System info** like CPU-Z: CPU model, cores, caches, instruction sets, motherboard, BIOS, memory modules, graphics card and driver.
+- **CSV recording:** all values to a table to compare "before and after overclocking".
+- **Tray and mini mode:** a tray icon showing temperature or FPS, and a small always-on-top window with four numbers.
+- **Power saving** for laptops: on battery the program refreshes less often; minimized to the tray it uses almost no CPU.
+- **Dark and light themes**, accent colour choice.
 - **Autostart** with Windows, **languages** Russian and English.
 
 ### Privacy
@@ -107,6 +119,7 @@ On first run Windows may show "Windows protected your PC" — this happens to ev
 ### Благодарности / Credits
 
 - **Mem Reduct** — автор **Henry++** ([github.com/henrypp/memreduct](https://github.com/henrypp/memreduct)). Очистка памяти в PC Monitor сделана по идее Mem Reduct; код Mem Reduct не используется — программа сама вызывает те же функции Windows. / The memory cleaner follows the idea of Mem Reduct by Henry++; no Mem Reduct code is used.
+- **CPU-Z** — **CPUID** ([cpuid.com](https://www.cpuid.com/softwares/cpu-z.html)). Окно «О системе» сделано по идее CPU-Z; CPU-Z в программу не входит — сведения собираются своим кодом. / The System info window follows the idea of CPU-Z by CPUID; CPU-Z is not included.
 - **LibreHardwareMonitor** (MPL 2.0) — датчики / sensors.
 - **Intel PresentMon** (MIT) — FPS.
 - **Qt** (LGPL v3) — интерфейс / UI.
