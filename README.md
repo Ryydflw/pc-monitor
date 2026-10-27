@@ -48,6 +48,7 @@
 **Мы ничего о вас не собираем.** Нет аккаунтов, рекламы и телеметрии.
 - Датчики читаются у LibreHardwareMonitor на этом же компьютере (127.0.0.1).
 - Пинг: раз в секунду на выбранный адрес уходит обычный ICMP-пакет без данных о вас. Можно выключить.
+- Список поддержавших автора: при запуске скачивается файл `supporters.json` с GitHub (только имена для окна благодарностей).
 - Обновления: при запуске и по кнопке программа спрашивает у GitHub номер последней версии. Если вышла новая — появится окно «Обновиться / Не сейчас».
 - Настройки хранятся только у вас в реестре (`HKCU\Software\PcMonitor`).
 
@@ -61,6 +62,14 @@
 - Без «умного» блока питания потребление системы — оценка.
 - В эксклюзивном полноэкранном режиме игра может перекрыть оверлей — используйте «оконный без рамки».
 - Версия для Windows 7 не проверялась на настоящей Windows 7.
+
+### Отказ от ответственности
+
+PC Monitor распространяется «как есть», без каких-либо гарантий. Автор не несёт ответственности за блокировки аккаунтов в играх, потерю игрового прогресса, сбои, перегрев или иной ущерб, связанный с использованием программы. Используйте на свой риск.
+
+- **Программа не внедряется в игры** и не меняет их файлы и память. Оверлей — отдельное окно поверх игры, а FPS считается через PresentMon — стандартные события Windows (ETW), которые использует и сама Windows. Поэтому риск срабатывания античита низкий, но гарантировать это для каждой игры невозможно. Если сомневаетесь — проверьте правила игры.
+- **Программа не разгоняет железо** и не меняет напряжения и обороты вентиляторов — только показывает их.
+- **Игровой режим** меняет приоритеты процессов и план питания только на время игры и возвращает всё после неё.
 
 ---
 
@@ -108,6 +117,7 @@ The program is free and will stay free. If it helped you, support development on
 **We collect nothing about you.** No accounts, ads or telemetry.
 - Sensors are read from LibreHardwareMonitor on the same computer (127.0.0.1).
 - Ping: once a second a plain ICMP packet with no data about you goes to the chosen address. Can be turned off.
+- Supporters list: at startup the file `supporters.json` is downloaded from GitHub (only names for the thank-you window).
 - Updates: at startup and on the button the program asks GitHub for the latest version number. If a new one is out, you get an "Update / Not now" prompt.
 - Settings stay on your PC in the registry (`HKCU\Software\PcMonitor`).
 
@@ -121,6 +131,14 @@ The program is free and will stay free. If it helped you, support development on
 - Without a smart PSU, system power is an estimate.
 - In exclusive fullscreen a game may cover the overlay — use borderless windowed mode.
 - The Windows 7 edition has not been tested on a real Windows 7 machine.
+
+### Disclaimer
+
+PC Monitor is provided "as is", without any warranty. The author is not responsible for game account bans, lost game progress, crashes, overheating or any other damage related to using the program. Use at your own risk.
+
+- **The program does not inject into games** and does not change their files or memory. The overlay is a separate window on top of the game, and FPS is measured with PresentMon — standard Windows events (ETW) that Windows itself uses. So the risk of triggering an anti-cheat is low, but it cannot be guaranteed for every game. If in doubt, check the game's rules.
+- **The program does not overclock** and does not change voltages or fan speeds — it only shows them.
+- **Game mode** changes process priorities and the power plan only while a game runs and restores everything afterwards.
 
 ---
 
