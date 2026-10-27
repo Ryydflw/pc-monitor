@@ -1,0 +1,59 @@
+# Публикует заранее загруженный черновик выпуска в назначенное время.
+# 30 октября, 18:00 по Москве (15:00 UTC). GitHub иногда запускает расписание с опозданием,
+# поэтому попыток несколько — первая удачная публикует, остальные видят, что публиковать уже нечего.
+name: Scheduled release
+
+on:
+  schedule:
+    - cron: '*/10 15 30 10 *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Только проверить черновик, ничего не публиковать'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: v1.3.0
+      NOT_BEFORE: '2026-10-30T15:00:00Z'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Publish draft release
+        run: |
+          set -e
+          draft=$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft 2>/dev/null || echo missing)
+          echo "Черновик $TAG: $draft"
+          if [ "$draft" != "true" ]; then
+            echo "Публиковать нечего."
+            exit 0
+          fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.dry_run }}" = "true" ]; then
+            echo "Проверка: черновик найден, публикация не выполнялась."
+            exit 0
+          fi
+          if [ "$(date -u +%s)" -lt "$(date -u -d "$NOT_BEFORE" +%s)" ]; then
+            echo "Ещё рано: выпуск запланирован на $NOT_BEFORE."
+            exit 0
+          fi
+          gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --draft=false --latest
+          echo "Опубликовано: $TAG"
+
+      - name: Update README
+        run: |
+          if [ ! -f .github/scheduled/README.md ] || cmp -s .github/scheduled/README.md README.md; then exit 0; fi
+          draft=$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft 2>/dev/null || echo missing)
+          if [ "$draft" != "false" ]; then exit 0; fi
+          cp .github/scheduled/README.md README.md
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "README: $TAG"
+          git push
