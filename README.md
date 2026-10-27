@@ -39,6 +39,10 @@
 - **Тёмная и светлая темы**, выбор цвета акцента.
 - **Автозапуск** с Windows, **языки** русский и английский.
 
+### Поддержать автора
+
+Программа бесплатная и останется бесплатной. Если она вам помогла — поддержите разработку на **[Boosty](https://boosty.to/pcmonitor)** ❤
+
 ### Конфиденциальность
 
 **Мы ничего о вас не собираем.** Нет аккаунтов, рекламы и телеметрии.
@@ -94,6 +98,10 @@ On first run Windows may show "Windows protected your PC" — this happens to ev
 - **Power saving** for laptops: on battery the program refreshes less often; minimized to the tray it uses almost no CPU.
 - **Dark and light themes**, accent colour choice.
 - **Autostart** with Windows, **languages** Russian and English.
+
+### Support the author
+
+The program is free and will stay free. If it helped you, support development on **[Boosty](https://boosty.to/pcmonitor)** ❤
 
 ### Privacy
 
