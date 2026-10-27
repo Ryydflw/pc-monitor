@@ -14,8 +14,8 @@
 
 | Система | Файл |
 |---|---|
-| Windows 10 / 11 (64-бит) | `PcMonitor-1.2.5.exe` |
-| Windows 7 / 8 / 8.1 (64-бит) | `PcMonitor-1.2.5-win7.exe` |
+| Windows 10 / 11 (64-бит) | `PcMonitor-1.2.6.exe` |
+| Windows 7 / 8 / 8.1 (64-бит) | `PcMonitor-1.2.6-win7.exe` |
 
 При первом запуске Windows может показать «Windows защитила ваш компьютер» — так бывает со всеми новыми программами без платной цифровой подписи. Нажмите **Подробнее → Выполнить в любом случае**.
 
@@ -74,8 +74,8 @@ Real-time PC monitoring for Windows: CPU, GPU, RAM, power, ping and game FPS cha
 
 | System | File |
 |---|---|
-| Windows 10 / 11 (64-bit) | `PcMonitor-1.2.5.exe` |
-| Windows 7 / 8 / 8.1 (64-bit) | `PcMonitor-1.2.5-win7.exe` |
+| Windows 10 / 11 (64-bit) | `PcMonitor-1.2.6.exe` |
+| Windows 7 / 8 / 8.1 (64-bit) | `PcMonitor-1.2.6-win7.exe` |
 
 On first run Windows may show "Windows protected your PC" — this happens to every new program without a paid code-signing certificate. Click **More info → Run anyway**.
 
